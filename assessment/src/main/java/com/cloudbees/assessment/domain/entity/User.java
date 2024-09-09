@@ -21,4 +21,8 @@ public class User {
     private String name;
     private String lastName;
     private String email;
+
+    public String getSubject(){
+        return this.name + " " + this.lastName;
+    }
 }

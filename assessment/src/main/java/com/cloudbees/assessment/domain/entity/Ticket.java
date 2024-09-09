@@ -29,6 +29,6 @@ public class Ticket {
     private Train train;
 
     private Section section;
-    private Integer seat;
+    private Integer seatNum;
 
 }
