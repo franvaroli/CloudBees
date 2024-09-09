@@ -16,4 +16,8 @@ public interface TicketRepository extends JpaRepository<Ticket, Long> {
     List<Ticket> findAllByTrainAndUser(Train train, User user);
 
     List<Ticket> findAllByTrainAndSection(Train train, Section section);
+
+    boolean existsTicketByUserId(Long id);
+
+    boolean existsTicketByTrainId(Long id);
 }

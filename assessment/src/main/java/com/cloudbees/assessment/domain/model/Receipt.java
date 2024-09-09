@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Receipt {
 
+    private Long idTicket;
     private String from;
     private String to;
     private String subject;

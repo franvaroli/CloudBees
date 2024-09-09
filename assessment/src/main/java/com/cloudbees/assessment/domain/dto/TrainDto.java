@@ -1,9 +1,5 @@
-package com.cloudbees.assessment.domain.entity;
+package com.cloudbees.assessment.domain.dto;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -12,25 +8,19 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
-
-@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Valid
-public class Train {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class TrainDto {
 
     @Size(min = 1, max = 20)
     private String from;
+
     @Size(min = 1, max = 20)
     private String to;
 
     @Min(0)
     @Max(10000)
-    private Double price;
+    private double price;
 }

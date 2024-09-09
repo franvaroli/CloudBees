@@ -14,6 +14,7 @@ public class ReceiptMapper {
         }
 
         Receipt receipt = new Receipt();
+        receipt.setIdTicket(ticket.getId());
         receipt.setFrom(ticket.getTrain().getFrom());
         receipt.setTo(ticket.getTrain().getTo());
         receipt.setSubject(ticket.getUser().getSubject());
